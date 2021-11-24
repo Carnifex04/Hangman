@@ -38,11 +38,11 @@ while not end_of_game:
     for position in range(length):
         if chosen_word[position] == guess:
             display[position] = chosen_word[position]
-            letter_found=True
+            letter_found = True
 
     #Checking if user is wrong.
     if not letter_found:
-      lives-=1
+      lives -= 1
       print(f"The letter '{guess}' is not present in the word. Guess Again...")
     else:
       print(f"You guessed correct. The letter '{guess}' is present in the word")
@@ -54,8 +54,8 @@ while not end_of_game:
     print(f"{' '.join(display)}\n")
 
     #Checking if user has got all letters.
-    if lives==0:
-      end_of_game=True
+    if lives == 0:
+      end_of_game = True
       print(f"The word was '{chosen_word}'")
       print("The Hangman died. You Lose :(")
     if "_" not in display:
